@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+.center {
+    padding: 70px 0;
+    text-align: center;
+}
+.vcenter {white-space:nowrap;}
+.vcenter > * {white-space:normal;}
+
+.vcenter:before,
+.vcenter >* {display:inline-block; vertical-align:middle;}
+
+.vcenter:before {content:"";  height:100%;}
+
+.vcenter {word-spacing:-.25em;}
+.vcenter > * {word-spacing:normal;}
+</style>
+<script type="text/javascript">
+function updateDatabase() { alert('Submit'); }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<div class="center">
+<p>Chores Rater</p>
+<div class="vcenter" style="height:100px;">
+<label for="kitchen">Kitchen</label>
+  <select name="kitchen" id="kitchen">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="Not Done">Not Done</option>
+</select> 
+</div>
+<div class="vcenter" style="height:100px;">
+<label for="downstairs">Downstairs</label>
+  <select name="downstairs" id="downstairs">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="Not Done">Not Done</option>
+</select> 
+</div>
+<div class="vcenter" style="height:100px;">
+<label for="livingroom">Living Room</label>
+  <select name="livingroom" id="livingroom">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="Not Done">Not Done</option>
+</select> 
+</div>
+<div class="vcenter" style="height:100px;">
+<label for="bar">Bar</label>
+  <select name="bar" id="bar">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="Not Done">Not Done</option>
+</select> 
+</div>
+ <button type="button"onClick="updateDatabase()">Submit</button> 
+</div>
+</body>
+</html>
