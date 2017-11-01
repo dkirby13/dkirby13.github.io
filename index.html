@@ -26,12 +26,12 @@ var con = mysql.createConnection({
   password: "jCp564KLtf",
   database: "sql3202475"
 });
-var message;
+var message = "err: ";
 con.connect(function(err) {
-  if (err) message = err ;
+  if (err) message = message +  err ;
   var sql = "INSERT INTO housemates (name, lastWeekRating, totalRating, totalWeeks, lastBarRating, lastKitchenRating, lastDownstairsRating, lastLivingRating) VALUES ('Scooter', 23,23,23,23,23,23)";
   con.query(sql, function (err, result) {
-    if (err) message = err;
+    if (err) message = message + err;
     alert(message);
   });
 });
