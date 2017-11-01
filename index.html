@@ -17,7 +17,27 @@
 .vcenter > * {word-spacing:normal;}
 </style>
 <script type="text/javascript">
-function updateDatabase() { alert('Submit'); }
+function updateDatabase() {
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "sql3.freemysqlhosting.net",
+  user:  "sql3202475",
+  password: "jCp564KLtf",
+  database: "sql3202475"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "INSERT INTO housemates (name, lastWeekRating, totalRating, totalWeeks, lastBarRating, lastKitchenRating, lastDownstairsRating, lastLivingRating) VALUES ('Scooter', 23,23,23,23,23,23)";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    alert("1 record inserted");
+  });
+});
+
+
+}
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
