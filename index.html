@@ -16,33 +16,6 @@
 .vcenter {word-spacing:-.25em;}
 .vcenter > * {word-spacing:normal;}
 </style>
-    <!--
-<script type="text/javascript">
-   
-function updateDatabase() {
-    
-var mysql = require('mysql');
-    
-var con = mysql.createConnection({
-  host: "sql3.freemysqlhosting.net",
-  user:  "sql3202475",
-  password: "jCp564KLtf",
-  database: "sql3202475"
-});
-var message = "err: ";
-con.connect(function(err) {
-  if (err) message = message +  err ;
-  var sql = "INSERT INTO housemates (name, lastWeekRating, totalRating, totalWeeks, lastBarRating, lastKitchenRating, lastDownstairsRating, lastLivingRating) VALUES ('Scooter', 23,23,23,23,23,23)";
-  con.query(sql, function (err, result) {
-    if (err) message = message + err;
-    alert(message);
-  });
-});
-
-    alert('hell');
-
-}
-</script>-->
  <?php
 //Step1
 function runMyFunction(){
