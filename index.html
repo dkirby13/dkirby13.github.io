@@ -16,11 +16,13 @@
 .vcenter {word-spacing:-.25em;}
 .vcenter > * {word-spacing:normal;}
 </style>
+    <!--
 <script type="text/javascript">
+   
 function updateDatabase() {
     
 var mysql = require('mysql');
-    /*
+    
 var con = mysql.createConnection({
   host: "sql3.freemysqlhosting.net",
   user:  "sql3202475",
@@ -36,16 +38,29 @@ con.connect(function(err) {
     alert(message);
   });
 });
-*/
+
     alert('hell');
 
 }
-</script>
+</script>-->
+ <?php
+//Step1
+function runMyFunction(){
+ $db = mysqli_connect('sql3.freemysqlhosting.net','sql3202475','jCp564KLtf','sql3202475')
+ or die('Error connecting to MySQL server.');
+}
+
+if($_GET['hello'])){
+    runMyFunction();
+}
+?>
+    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <div class="center">
 <p>Chores Rater</p>
+
 <div class="vcenter" style="height:100px;">
 <label for="kitchen">Kitchen</label>
   <select name="kitchen" id="kitchen">
@@ -90,7 +105,8 @@ con.connect(function(err) {
   <option value="Not Done">Not Done</option>
 </select> 
 </div>
- <button type="button"onClick="updateDatabase()">Submit</button> 
+<!-- <input type="submit" class="button" name="insert" value="insert">Submit</button> -->
+    <a href='index.php?hello=true'>Run PHP Function</a>
 </div>
 </body>
 </html>
