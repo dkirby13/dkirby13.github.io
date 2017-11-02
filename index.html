@@ -78,8 +78,24 @@ if($_GET['hello'])){
   <option value="Not Done">Not Done</option>
 </select> 
 </div>
-<!-- <input type="submit" class="button" name="insert" value="insert">Submit</button> -->
-    <a href='index.php?hello=true'>Run PHP Function</a>
+<button type="button">Click Me</button> 
+<p></p>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+
+            $.ajax({
+                type: 'POST',
+                url: 'script.php',
+                success: function(data) {
+                    alert(data);
+                    $("p").text(data);
+
+                }
+            });
+   });
+});
+</script>
 </div>
 </body>
 </html>
